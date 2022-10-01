@@ -1,12 +1,22 @@
 import re
-
-from fastapi import FastAPI, HTTPException, Query
-from typing import List
-from typing import Union
+from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 app = FastAPI()
 
+origins = [
+    "https://fastapi.polverini.com.ar",
+    "http://localhost:3000",
+    "http://localhost:3080",
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class Transposicion(BaseModel):
     texto: str

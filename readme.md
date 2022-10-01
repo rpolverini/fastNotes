@@ -19,7 +19,8 @@ En principio la idea es tener algunos endpoints que permitan transponer notas mu
 
  uvicorn main:app
 
-# Lanzar Con Docker
+# Lanzar Con Docker (crear imagen localmente y lanzar container )
+
 sudo docker build -t fast_notes_image .
 
 sudo docker run -d --name fastNotesContainer -p 80:80 fast_notes_image
