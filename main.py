@@ -9,6 +9,7 @@ origins = [
     "https://fastapi.polverini.com.ar",
     "http://localhost:3000",
     "http://localhost:3080",
+    "https://rpolverini.github.io",
 ]
 app.add_middleware(
     CORSMiddleware,
