@@ -10,8 +10,7 @@ origins = [
     "http://localhost:3000",
     "http://localhost:3080",
     "https://rpolverini.github.io",
-    "https://rpolverini.github.io/fast-notes-front/"
-    "*",
+
 ]
 app.add_middleware(
     CORSMiddleware,
